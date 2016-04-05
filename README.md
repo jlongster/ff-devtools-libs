@@ -51,4 +51,4 @@ firefox-proxy [--web-socket-port 9000] [--tcp-port 6080]
 `node_modules/.bin/firefox-proxy`. It is recommend to run it in
 whatever `run` task you have in your npm scripts or gulpfile. It's a
 simple JS file in the `bin` directory, so you may run `node
-node_modules/ff-devtools-libs/bin/firefox-proxy.js` as well.
+node_modules/ff-devtools-libs/bin/firefox-proxy` as well.
