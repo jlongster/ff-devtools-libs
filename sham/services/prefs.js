@@ -1,4 +1,5 @@
-let DEFAULTS = require("../../preferences.json");
+let DEFAULTS = require("../../preferences.js");
+
 // TODO Can make this localStorage or something in the future?
 let storage = JSON.parse(JSON.stringify(DEFAULTS));
 
