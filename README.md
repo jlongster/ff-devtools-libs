@@ -14,7 +14,14 @@ A lot of other dependencies are provided as well. **If you develop
 against this, your code should run without changes just fine in the
 Firefox DevTools context as well**.
 
-Connecting a remote is as easy as:
+Install it via npm:
+
+```
+npm install ff-devtools-libs
+```
+
+Connecting a remote is as easy as (see below for aliasing `devtools`
+to `ff-devtools-libs`):
 
 ```js
 const { DebuggerClient } = require('devtools/shared/client/main');
@@ -39,9 +46,23 @@ target.activeTab.attachThread({}, (res, threadClient) => {
 });
 ```
 
-You need to run a separate proxy for this to work. This sets up a
-websocket connection that forwards everything to the native devtools
-TCP connection.
+You will need to create aliases for the top-level `devtools` and `sdk`
+paths. Example webpack config:
+
+```js
+{
+  resolve: {
+    alias: {
+      "devtools": "ff-devtools-libs",
+      "sdk": "ff-devtools-libs/sdk"
+    }
+  }
+}
+```
+
+Lastly, you need to run a separate proxy for this to work. This sets
+up a websocket connection that forwards everything to the native
+devtools TCP connection.
 
 ```
 firefox-proxy [--web-socket-port 9000] [--tcp-port 6080]
