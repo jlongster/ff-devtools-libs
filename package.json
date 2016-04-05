@@ -1,0 +1,12 @@
+{
+  "name": "ff-devtools-libs",
+  "version": "0.0.1",
+  "bin": {
+    "firefox-proxy": "./bin/firefox-proxy"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "net": "^1.0.2",
+    "ws": "^1.0.1"
+  }
+}
