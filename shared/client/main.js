@@ -2751,7 +2751,7 @@ SourceClient.prototype = {
       to: this._form.actor,
       type: "source"
     };
-    this._client.request(packet, aResponse => {
+    return this._client.request(packet, aResponse => {
       this._onSourceResponse(aResponse, aCallback)
     });
   },
