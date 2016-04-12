@@ -19,14 +19,18 @@ var ourServices = {
 
 module.exports = {
   Cc: name => {
-    console.log('Cc sham for', name);
+    if(typeof console !== "undefined") {
+      console.log('Cc sham for', name);
+    }
     return {
       getService: (name) => ourServices[name],
       createInstance: (iface) => ourServices[iface],
     };
   },
   CC: (name, iface, method) => {
-    console.log('CC sham for', name, iface, method);
+    if(typeof console !== "undefined") {
+      console.log('CC sham for', name, iface, method);
+    }
     return {
     };
   },
@@ -35,7 +39,7 @@ module.exports = {
       "DISPATCH_NORMAL":0,
       "DISPATCH_SYNC":1
     },
-    nsIDOMNode: HTMLElement,
+    nsIDOMNode: typeof HTMLElement !== "undefined" ? HTMLElement : null,
     nsIFocusManager: {
       MOVEFOCUS_BACKWARD: 2,
       MOVEFOCUS_FORWARD: 1,
@@ -49,7 +53,7 @@ module.exports = {
     nsIXULChromeRegistry: "nsIXULChromeRegistry",
   },
   Cu: {
-    reportError: (msg) => console.error(msg),
+    reportError: msg => { (typeof console !== "undefined") ? console.error(msg) : dump(msg) },
     callFunctionWithAsyncStack: fn => fn(),
   },
   Cr: {},
