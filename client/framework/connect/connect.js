@@ -6,17 +6,17 @@
 
 "use strict";
 
-const { Cu } = require("devtools/sham/chrome");
+const { Cu } = require("ff-devtools-lib/sham/chrome");
 
-const { XPCOMUtils } = require("devtools/sham/xpcomutils");
-const { Services } = require("devtools/sham/services");
-const { Task } = require("devtools/sham/task");
-const { gDevTools } = require("devtools/client/framework/gDevTools");
-var L10N = require("devtools/sham/l10n");
-var {TargetFactory} = require("devtools/client/framework/target");
-var {Toolbox} = require("devtools/client/framework/toolbox")
-var promise = require("devtools/sham/promise");
-var {DebuggerClient} = require("devtools/shared/client/main");
+const { XPCOMUtils } = require("ff-devtools-lib/sham/xpcomutils");
+const { Services } = require("ff-devtools-lib/sham/services");
+const { Task } = require("ff-devtools-lib/sham/task");
+const { gDevTools } = require("ff-devtools-lib/client/framework/gDevTools");
+var L10N = require("ff-devtools-lib/sham/l10n");
+var {TargetFactory} = require("ff-devtools-lib/client/framework/target");
+var {Toolbox} = require("ff-devtools-lib/client/framework/toolbox")
+var promise = require("ff-devtools-lib/sham/promise");
+var {DebuggerClient} = require("ff-devtools-lib/shared/client/main");
 
 var gClient;
 var gConnectionTimeout;

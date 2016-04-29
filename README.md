@@ -26,7 +26,7 @@ to `ff-devtools-libs`):
 ```js
 const { DebuggerClient } = require('devtools/shared/client/main');
 const { DebuggerTransport } = require('devtools/transport/transport');
-const { TargetFactory } = require("devtools/client/framework/target");
+const { TargetFactory } = require("ff-devtools-lib/client/framework/target");
 const socket = new WebSocket("ws://localhost:9000");
 const transport = new DebuggerTransport(socket);
 const client = new DebuggerClient(transport);

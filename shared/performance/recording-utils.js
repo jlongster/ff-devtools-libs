@@ -3,7 +3,7 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-const { Cc, Ci, Cu, Cr } = require("devtools/sham/chrome");
+const { Cc, Ci, Cu, Cr } = require("ff-devtools-lib/sham/chrome");
 const { extend } = require("sdk/util/object");
 
 /**

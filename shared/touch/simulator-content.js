@@ -5,9 +5,9 @@
    removeEventListener */
 "use strict";
 
-const { Ci, Cu } = require("devtools/sham/chrome");
+const { Ci, Cu } = require("ff-devtools-lib/sham/chrome");
 
-const { Services } = require("devtools/sham/services");
+const { Services } = require("ff-devtools-lib/sham/services");
 
 var systemAppOrigin = (function() {
   let systemOrigin = "_";

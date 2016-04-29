@@ -10,13 +10,13 @@
 
 "use strict";
 
-const DevToolsUtils = require("devtools/shared/DevToolsUtils");
+const DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
 const { dumpn, dumpv } = DevToolsUtils;
-const StreamUtils = require("devtools/shared/transport/stream-utils");
+const StreamUtils = require("ff-devtools-lib/shared/transport/stream-utils");
 const { Packet, JSONPacket, BulkPacket } =
-  require("devtools/shared/transport/packets");
-const promise = require("devtools/sham/promise");
-const EventEmitter = require("devtools/shared/event-emitter");
+  require("ff-devtools-lib/shared/transport/packets");
+const promise = require("ff-devtools-lib/sham/promise");
+const EventEmitter = require("ff-devtools-lib/shared/event-emitter");
 const utf8 = require("./utf8");
 
 const PACKET_HEADER_MAX = 200;

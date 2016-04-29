@@ -4,11 +4,11 @@
 
 "use strict";
 
-const {Cu, Cc, Ci} = require("devtools/sham/chrome");
-const {Services} = require("devtools/sham/services");
-const promise = require("devtools/sham/promise");
-const { XPCOMUtils } = require("devtools/sham/xpcomutils");
-const { gDevTools } = require("devtools/client/framework/gDevTools");
+const {Cu, Cc, Ci} = require("ff-devtools-lib/sham/chrome");
+const {Services} = require("ff-devtools-lib/sham/services");
+const promise = require("ff-devtools-lib/sham/promise");
+const { XPCOMUtils } = require("ff-devtools-lib/sham/xpcomutils");
+const { gDevTools } = require("ff-devtools-lib/client/framework/gDevTools");
 
 exports.OptionsPanel = OptionsPanel;
 
@@ -86,7 +86,7 @@ function OptionsPanel(iframeWindow, toolbox) {
 
   this._addListeners();
 
-  const EventEmitter = require("devtools/shared/event-emitter");
+  const EventEmitter = require("ff-devtools-lib/shared/event-emitter");
   EventEmitter.decorate(this);
 }
 

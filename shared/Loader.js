@@ -9,18 +9,18 @@
  * Manages the addon-sdk loader instance used to load the developer tools.
  */
 
-const { CC, Cc, Ci, Cu } = require("devtools/sham/chrome");
+const { CC, Cc, Ci, Cu } = require("ff-devtools-lib/sham/chrome");
 
-const { XPCOMUtils } = require("devtools/sham/xpcomutils");
-const { Services } = require("devtools/sham/services");
+const { XPCOMUtils } = require("ff-devtools-lib/sham/xpcomutils");
+const { Services } = require("ff-devtools-lib/sham/services");
 
-const { NetUtil } = require("devtools/sham/netutil");
-const { FileUtils } = require("devtools/sham/fileutils");
-const { OS } = require("devtools/sham/osfile");
+const { NetUtil } = require("ff-devtools-lib/sham/netutil");
+const { FileUtils } = require("ff-devtools-lib/sham/fileutils");
+const { OS } = require("ff-devtools-lib/sham/osfile");
 
 // Hoping that we can skip creating a sham for this
 //var { Loader } = require("gre/modules/commonjs/toolkit/loader.js", {});
-var promise = require("devtools/sham/promise").Promise;
+var promise = require("ff-devtools-lib/sham/promise").Promise;
 
 this.EXPORTED_SYMBOLS = ["DevToolsLoader", "devtools", "BuiltinProvider",
                          "SrcdirProvider", "require", "loader"];
@@ -49,7 +49,7 @@ XPCOMUtils.defineLazyGetter(loaderModules, "Debugger", () => {
   return sandbox.Debugger;
 });
 //XPCOMUtils.defineLazyGetter(loaderModules, "Timer", () => {
-//  let {setTimeout, clearTimeout} = require("devtools/sham/timer");
+//  let {setTimeout, clearTimeout} = require("ff-devtools-lib/sham/timer");
 //  // Do not return 'require' result, as SDK loader would freeze Timer.jsm globals...
 //  return {
 //    setTimeout,
@@ -435,11 +435,11 @@ DevToolsLoader.prototype = {
       // and are on a browser window.
       // Wait for a second before opening the toolbox to avoid races
       // between the old and the new one.
-      //const {setTimeout} = require("devtools/sham/timer");
+      //const {setTimeout} = require("ff-devtools-lib/sham/timer");
       setTimeout(() => {
         let { gBrowser } = window;
         let target = this.TargetFactory.forTab(gBrowser.selectedTab);
-        const { gDevTools } = require("devtools/client/framework/gDevTools");
+        const { gDevTools } = require("ff-devtools-lib/client/framework/gDevTools");
         gDevTools.showToolbox(target);
       }, 1000);
     } else if (location.includes("/webide.xul")) {

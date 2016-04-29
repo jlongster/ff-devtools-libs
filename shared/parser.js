@@ -5,10 +5,10 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-const { Ci, Cu } = require("devtools/sham/chrome");
+const { Ci, Cu } = require("ff-devtools-lib/sham/chrome");
 
-const { XPCOMUtils } = require("devtools/sham/xpcomutils");
-const DevToolsUtils = require("devtools/shared/DevToolsUtils");
+const { XPCOMUtils } = require("ff-devtools-lib/sham/xpcomutils");
+const DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
 
 //XPCOMUtils.defineLazyModuleGetter(this,
 //  "Reflect", "resource://gre/modules/reflect.jsm");

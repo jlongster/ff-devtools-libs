@@ -6,13 +6,13 @@
 
 "use strict";
 
-const {Ci} = require("devtools/sham/chrome");
-const Services = require("devtools/sham/services");
+const {Ci} = require("ff-devtools-lib/sham/chrome");
+const Services = require("ff-devtools-lib/sham/services");
 
-const {DebuggerServer} = require("devtools/server/main");
-const {makeInfallible} = require("devtools/shared/DevToolsUtils");
+const {DebuggerServer} = require("ff-devtools-lib/server/main");
+const {makeInfallible} = require("ff-devtools-lib/shared/DevToolsUtils");
 
-loader.lazyGetter(this, "NetworkHelper", () => require("devtools/shared/webconsole/network-helper"));
+loader.lazyGetter(this, "NetworkHelper", () => require("ff-devtools-lib/shared/webconsole/network-helper"));
 
 // Helper tracer. Should be generic sharable by other modules (bug 1171927)
 const trace = {

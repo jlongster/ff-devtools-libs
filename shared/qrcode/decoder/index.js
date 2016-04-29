@@ -1362,9 +1362,9 @@ Decoder.decode = function(bits) {
 };
 
 // mozilla: Get access to a window
-var Services = require("devtools/sham/services");
+var Services = require("ff-devtools-lib/sham/services");
 
-var DebuggerServer = require("devtools/server/main").DebuggerServer;
+var DebuggerServer = require("ff-devtools-lib/server/main").DebuggerServer;
 
 var window = Services.wm.getMostRecentWindow(DebuggerServer.chromeWindowType);
 

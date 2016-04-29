@@ -4,10 +4,10 @@
 
 "use strict";
 
-const {Cc, Ci, Cu} = require("devtools/sham/chrome");
-const promise = require("devtools/sham/promise");
-const { Task } = require("devtools/sham/task");
-const DevToolsUtils = require("devtools/shared/DevToolsUtils");
+const {Cc, Ci, Cu} = require("ff-devtools-lib/sham/chrome");
+const promise = require("ff-devtools-lib/sham/promise");
+const { Task } = require("ff-devtools-lib/sham/task");
+const DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
 
 /**
  * Client-side highlighter shared module.

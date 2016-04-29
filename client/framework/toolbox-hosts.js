@@ -4,11 +4,11 @@
 
 "use strict";
 
-const {Cu} = require("devtools/sham/chrome");
-const EventEmitter = require("devtools/shared/event-emitter");
-const promise = require("devtools/sham/promise");
-const { Services } = require("devtools/sham/services");
-const { DOMHelpers } = require("devtools/client/shared/DOMHelpers");
+const {Cu} = require("ff-devtools-lib/sham/chrome");
+const EventEmitter = require("ff-devtools-lib/shared/event-emitter");
+const promise = require("ff-devtools-lib/sham/promise");
+const { Services } = require("ff-devtools-lib/sham/services");
+const { DOMHelpers } = require("ff-devtools-lib/client/shared/DOMHelpers");
 
 /* A host should always allow this much space for the page to be displayed.
  * There is also a min-height on the browser, but we still don't want to set

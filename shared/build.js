@@ -71,8 +71,8 @@ var Client =
 	var _require2 = __webpack_require__(22);
 
 	const WebConsoleClient = _require2.WebConsoleClient;
-	/*const { DebuggerSocket } = require("devtools/shared/security/socket");*/
-	/*const Authentication = require("devtools/shared/security/auth");*/
+	/*const { DebuggerSocket } = require("ff-devtools-lib/shared/security/socket");*/
+	/*const Authentication = require("ff-devtools-lib/shared/security/auth");*/
 
 	const noop = function () {};
 

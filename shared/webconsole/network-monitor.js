@@ -4,14 +4,14 @@
 
 "use strict";
 
-const {Cc, Ci, Cu, Cr} = require("devtools/sham/chrome");
+const {Cc, Ci, Cu, Cr} = require("ff-devtools-lib/sham/chrome");
 
-const { XPCOMUtils } = require("devtools/sham/xpcomutils");
+const { XPCOMUtils } = require("ff-devtools-lib/sham/xpcomutils");
 
-const NetworkHelper = require("devtools/shared/webconsole/network-helper");
-const { Services } = require("devtools/sham/services");
-const DevToolsUtils = require("devtools/shared/DevToolsUtils");
-const { NetUtil } = require("devtools/sham/netutil");
+const NetworkHelper = require("ff-devtools-lib/shared/webconsole/network-helper");
+const { Services } = require("ff-devtools-lib/sham/services");
+const DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
+const { NetUtil } = require("ff-devtools-lib/sham/netutil");
 loader.lazyServiceGetter(this, "gActivityDistributor",
                          "@mozilla.org/network/http-activity-distributor;1",
                          "nsIHttpActivityDistributor");

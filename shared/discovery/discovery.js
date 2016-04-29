@@ -31,8 +31,8 @@
  * is then available to scanning devices.
  */
 
-const { Cu, CC, Cc, Ci } = require("devtools/sham/chrome");
-const EventEmitter = require("devtools/shared/event-emitter");
+const { Cu, CC, Cc, Ci } = require("ff-devtools-lib/sham/chrome");
+const EventEmitter = require("ff-devtools-lib/shared/event-emitter");
 
 const UDPSocket = CC("@mozilla.org/network/udp-socket;1",
                      "nsIUDPSocket",
@@ -43,8 +43,8 @@ const UPDATE_PORT = 50625;
 const ADDRESS = "224.0.0.115";
 const REPLY_TIMEOUT = 5000;
 
-const { XPCOMUtils } = require("devtools/sham/xpcomutils");
-const { Services } = require("devtools/sham/services");
+const { XPCOMUtils } = require("ff-devtools-lib/sham/xpcomutils");
+const { Services } = require("ff-devtools-lib/sham/services");
 
 XPCOMUtils.defineLazyGetter(this, "converter", () => {
   let conv = Cc("@mozilla.org/intl/scriptableunicodeconverter").

@@ -4,7 +4,7 @@
 
 "use strict";
 
-const Services = require("devtools/sham/services");
+const Services = require("ff-devtools-lib/sham/services");
 
 /*
  * Returns the directory name of the path

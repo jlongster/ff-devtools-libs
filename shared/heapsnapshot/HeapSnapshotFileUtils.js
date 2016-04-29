@@ -22,9 +22,9 @@
 
 "use strict";
 
-const { Ci } = require("devtools/sham/chrome");
-const { FileUtils } = require("devtools/sham/fileutils");
-const { OS } = require("devtools/sham/osfile");
+const { Ci } = require("ff-devtools-lib/sham/chrome");
+const { FileUtils } = require("ff-devtools-lib/sham/fileutils");
+const { OS } = require("ff-devtools-lib/sham/osfile");
 
 function getHeapSnapshotFileTemplate() {
   return OS.Path.join(OS.Constants.Path.tmpDir, `${Date.now()}.fxsnapshot`);

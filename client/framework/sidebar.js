@@ -4,14 +4,14 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-const {Cu} = require("devtools/sham/chrome");
+const {Cu} = require("ff-devtools-lib/sham/chrome");
 
-const { XPCOMUtils } = require("devtools/sham/xpcomutils");
-const { Services } = require("devtools/sham/services");
-const { Task } = require("devtools/sham/task");
+const { XPCOMUtils } = require("ff-devtools-lib/sham/xpcomutils");
+const { Services } = require("ff-devtools-lib/sham/services");
+const { Task } = require("ff-devtools-lib/sham/task");
 
-var EventEmitter = require("devtools/shared/event-emitter");
-var Telemetry = require("devtools/client/shared/telemetry");
+var EventEmitter = require("ff-devtools-lib/shared/event-emitter");
+var Telemetry = require("ff-devtools-lib/client/shared/telemetry");
 
 const XULNS = "http://www.w3.org/1999/xhtml";
 

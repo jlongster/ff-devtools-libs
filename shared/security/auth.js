@@ -6,15 +6,15 @@
 
 "use strict";
 
-var { Ci, Cc } = require("devtools/sham/chrome");
-var Services = require("devtools/sham/services");
-var promise = require("devtools/sham/promise");
-var DevToolsUtils = require("devtools/shared/DevToolsUtils");
+var { Ci, Cc } = require("ff-devtools-lib/sham/chrome");
+var Services = require("ff-devtools-lib/sham/services");
+var promise = require("ff-devtools-lib/sham/promise");
+var DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
 var { dumpn, dumpv } = DevToolsUtils;
-const prompt = require("devtools/shared/security/prompt");
-const cert = require("devtools/shared/security/cert");
-const asyncStorage = require("devtools/shared/async-storage");
-const { Task } = require("devtools/sham/task");
+const prompt = require("ff-devtools-lib/shared/security/prompt");
+const cert = require("ff-devtools-lib/shared/security/cert");
+const asyncStorage = require("ff-devtools-lib/shared/async-storage");
+const { Task } = require("ff-devtools-lib/sham/task");
 
 /**
  * A simple enum-like object with keys mirrored to values.

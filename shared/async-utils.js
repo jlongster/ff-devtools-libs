@@ -13,9 +13,9 @@
  * See Task documentation at https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Task.jsm.
  */
 
-var {Cu} = require("devtools/sham/chrome");
-const { Task } = require("devtools/sham/task");
-var Promise = require("devtools/sham/promise");
+var {Cu} = require("ff-devtools-lib/sham/chrome");
+const { Task } = require("ff-devtools-lib/sham/task");
+var Promise = require("ff-devtools-lib/sham/promise");
 
 /**
  * Create an async function that only executes once per instance of an object.

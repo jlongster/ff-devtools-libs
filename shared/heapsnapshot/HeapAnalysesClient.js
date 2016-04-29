@@ -4,8 +4,8 @@
 
 "use strict";
 
-const DevToolsUtils = require("devtools/shared/DevToolsUtils");
-const { DevToolsWorker } = require("devtools/shared/worker/worker");
+const DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
+const { DevToolsWorker } = require("ff-devtools-lib/shared/worker/worker");
 
 const WORKER_URL =
   "resource://devtools/shared/heapsnapshot/HeapAnalysesWorker.js";

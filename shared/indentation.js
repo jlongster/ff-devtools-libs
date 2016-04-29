@@ -6,8 +6,8 @@
 
 "use strict";
 
-const { Cu } = require("devtools/sham/chrome");
-const { Services } = require("devtools/sham/services");
+const { Cu } = require("ff-devtools-lib/sham/chrome");
+const { Services } = require("ff-devtools-lib/sham/services");
 
 const EXPAND_TAB = "devtools.editor.expandtab";
 const TAB_SIZE = "devtools.editor.tabsize";

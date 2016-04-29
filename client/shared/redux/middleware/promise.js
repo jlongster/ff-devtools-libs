@@ -4,10 +4,10 @@
 "use strict";
 
 const uuidgen = require("sdk/util/uuid").uuid;
-const promise = require("devtools/sham/promise");
+const promise = require("ff-devtools-lib/sham/promise");
 const {
   entries, toObject, reportException, executeSoon
-} = require("devtools/shared/DevToolsUtils");
+} = require("ff-devtools-lib/shared/DevToolsUtils");
 const PROMISE = exports.PROMISE = "@@dispatch/promise";
 
 function promiseMiddleware ({ dispatch, getState }) {

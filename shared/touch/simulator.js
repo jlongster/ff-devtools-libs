@@ -3,8 +3,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-var { Ci } = require("devtools/sham/chrome");
-var promise = require("devtools/sham/promise");
+var { Ci } = require("ff-devtools-lib/sham/chrome");
+var promise = require("ff-devtools-lib/sham/promise");
 
 const FRAME_SCRIPT =
   "resource://devtools/shared/touch/simulator-content.js";

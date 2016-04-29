@@ -4,7 +4,7 @@
 "use strict";
 
 const { Task } = require("resource://gre/modules/Task.jsm");
-const { executeSoon, isGenerator, isPromise, reportException } = require("devtools/shared/DevToolsUtils");
+const { executeSoon, isGenerator, isPromise, reportException } = require("ff-devtools-lib/shared/DevToolsUtils");
 const ERROR_TYPE = exports.ERROR_TYPE = "@@redux/middleware/task#error";
 
 /**

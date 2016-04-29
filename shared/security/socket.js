@@ -6,21 +6,21 @@
 
 "use strict";
 
-var { Ci, Cc, CC, Cr, Cu } = require("devtools/sham/chrome");
+var { Ci, Cc, CC, Cr, Cu } = require("ff-devtools-lib/sham/chrome");
 
 // Ensure PSM is initialized to support TLS sockets
 Cc("@mozilla.org/psm;1").getService(Ci.nsISupports);
 
-var Services = require("devtools/sham/services");
-var promise = require("devtools/sham/promise");
-var DevToolsUtils = require("devtools/shared/DevToolsUtils");
+var Services = require("ff-devtools-lib/sham/services");
+var promise = require("ff-devtools-lib/sham/promise");
+var DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
 var { dumpn, dumpv } = DevToolsUtils;
-const { DebuggerTransport } = require("devtools/shared/transport/transport");
-const { DebuggerServer } = require("devtools/server/main");
-const discovery = require("devtools/shared/discovery/discovery");
-const cert = require("devtools/shared/security/cert");
-const { Authenticators } = require("devtools/shared/security/auth");
-const { AuthenticationResult } = require("devtools/shared/security/auth");
+const { DebuggerTransport } = require("ff-devtools-lib/shared/transport/transport");
+const { DebuggerServer } = require("ff-devtools-lib/server/main");
+const discovery = require("ff-devtools-lib/shared/discovery/discovery");
+const cert = require("ff-devtools-lib/shared/security/cert");
+const { Authenticators } = require("ff-devtools-lib/shared/security/auth");
+const { AuthenticationResult } = require("ff-devtools-lib/shared/security/auth");
 
 DevToolsUtils.defineLazyGetter(this, "nsFile", () => {
   return CC("@mozilla.org/file/local;1", "nsIFile", "initWithPath");
@@ -41,7 +41,7 @@ DevToolsUtils.defineLazyGetter(this, "nssErrorsService", () => {
          .getService(Ci.nsINSSErrorsService);
 });
 
-const { Task } = require("devtools/sham/task");
+const { Task } = require("ff-devtools-lib/sham/task");
 
 var DebuggerSocket = {};
 

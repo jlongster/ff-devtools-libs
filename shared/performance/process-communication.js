@@ -11,7 +11,7 @@
  */
 
 const FRAME_SCRIPT_UTILS_URL = "/devtools/client/shared/frame-script-utils.js";
-const { Task } = require("devtools/sham/task");
+const { Task } = require("ff-devtools-lib/sham/task");
 const { uuid } = require("sdk/util/uuid");
 
 var mm = null;

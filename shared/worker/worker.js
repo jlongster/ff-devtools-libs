@@ -3,8 +3,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-const { Cc, Ci, Cu, ChromeWorker } = require("devtools/sham/chrome");
-const { dumpn } = require("devtools/shared/DevToolsUtils");
+const { Cc, Ci, Cu, ChromeWorker } = require("ff-devtools-lib/sham/chrome");
+const { dumpn } = require("ff-devtools-lib/shared/DevToolsUtils");
 
 var MESSAGE_COUNTER = 0;
 

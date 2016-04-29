@@ -1,15 +1,15 @@
-const {Ci, Cc, Cu, Cr} = require("devtools/sham/chrome");
-const { OS } = require("devtools/sham/osfile");
-const {Services} = require("devtools/sham/services");
-const {FileUtils} = require("devtools/sham/fileutils");
-const {NetUtil} = require("devtools/sham/netutil");
-const promise = require("devtools/sham/promise");
-const DevToolsUtils = require("devtools/shared/DevToolsUtils");
-const EventEmitter = require("devtools/shared/event-emitter");
+const {Ci, Cc, Cu, Cr} = require("ff-devtools-lib/sham/chrome");
+const { OS } = require("ff-devtools-lib/sham/osfile");
+const {Services} = require("ff-devtools-lib/sham/services");
+const {FileUtils} = require("ff-devtools-lib/sham/fileutils");
+const {NetUtil} = require("ff-devtools-lib/sham/netutil");
+const promise = require("ff-devtools-lib/sham/promise");
+const DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
+const EventEmitter = require("ff-devtools-lib/shared/event-emitter");
 
 // Bug 1188401: When loaded from xpcshell tests, we do not have browser/ files
 // and can't load target.js. Should be fixed by bug 912121.
-const { TargetFactory } = require("devtools/client/framework/target");
+const { TargetFactory } = require("ff-devtools-lib/client/framework/target");
 
 // XXX: bug 912476 make this module a real protocol.js front
 // by converting webapps actor to protocol.js
