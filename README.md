@@ -20,12 +20,16 @@ Install it via npm:
 npm install ff-devtools-libs
 ```
 
+The version published to npm has been compiled with babel to ensure
+that it will run in all environments (particularly node). See [1] for
+how it was compiled.
+
 Connecting a remote is as easy as (see below for aliasing `devtools`
 to `ff-devtools-libs`):
 
 ```js
-const { DebuggerClient } = require('devtools/shared/client/main');
-const { DebuggerTransport } = require('devtools/transport/transport');
+const { DebuggerClient } = require('ff-devtools-lib/shared/client/main');
+const { DebuggerTransport } = require('ff-devtools-lib/transport/transport');
 const { TargetFactory } = require("ff-devtools-lib/client/framework/target");
 const socket = new WebSocket("ws://localhost:9000");
 const transport = new DebuggerTransport(socket);
@@ -46,20 +50,6 @@ target.activeTab.attachThread({}, (res, threadClient) => {
 });
 ```
 
-You will need to create aliases for the top-level `devtools` and `sdk`
-paths. Example webpack config:
-
-```js
-{
-  resolve: {
-    alias: {
-      "devtools": "ff-devtools-libs",
-      "sdk": "ff-devtools-libs/sdk"
-    }
-  }
-}
-```
-
 Lastly, you need to run a separate proxy for this to work. This sets
 up a websocket connection that forwards everything to the native
 devtools TCP connection.
@@ -73,3 +63,10 @@ firefox-proxy [--web-socket-port 9000] [--tcp-port 6080]
 whatever `run` task you have in your npm scripts or gulpfile. It's a
 simple JS file in the `bin` directory, so you may run `node
 node_modules/ff-devtools-libs/bin/firefox-proxy` as well.
+
+[1] The babel command to compile all the files:
+
+```
+babel --plugins transform-es2015-spread,transform-es2015-block-scoping,transform-es2015-destructuring,transform-async-to-generator,transform-es2015-parameters \
+  -d ff-devtools-libs ff-devtools-libs-src
+```
