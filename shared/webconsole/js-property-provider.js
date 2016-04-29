@@ -6,8 +6,8 @@
 
 "use strict";
 
-const {Cc, Ci, Cu, components} = require("ff-devtools-lib/sham/chrome");
-const DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
+const {Cc, Ci, Cu, components} = require("ff-devtools-libs/sham/chrome");
+const DevToolsUtils = require("ff-devtools-libs/shared/DevToolsUtils");
 
 if (!isWorker) {
   loader.lazyImporter(this, "Parser", "devtools/shared/parser");

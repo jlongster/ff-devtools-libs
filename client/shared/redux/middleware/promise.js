@@ -3,11 +3,11 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-const uuidgen = require("ff-devtools-lib/sdk/util/uuid").uuid;
-const promise = require("ff-devtools-lib/sham/promise");
+const uuidgen = require("ff-devtools-libs/sdk/util/uuid").uuid;
+const promise = require("ff-devtools-libs/sham/promise");
 const {
   entries, toObject, reportException, executeSoon
-} = require("ff-devtools-lib/shared/DevToolsUtils");
+} = require("ff-devtools-libs/shared/DevToolsUtils");
 const PROMISE = exports.PROMISE = "@@dispatch/promise";
 
 function promiseMiddleware ({ dispatch, getState }) {

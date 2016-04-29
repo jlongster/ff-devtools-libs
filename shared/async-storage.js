@@ -39,9 +39,9 @@
  * DOM elements, but they may include things like Blobs and typed arrays.
  *
  */
-const {Cc, Ci, Cu, Cr} = require("ff-devtools-lib/sham/chrome");
-const {indexedDB} = { open: () => {} }; // require("ff-devtools-lib/sdk/indexed-db");
-const Promise = require("ff-devtools-lib/sham/promise");
+const {Cc, Ci, Cu, Cr} = require("ff-devtools-libs/sham/chrome");
+const {indexedDB} = { open: () => {} }; // require("ff-devtools-libs/sdk/indexed-db");
+const Promise = require("ff-devtools-libs/sham/promise");
 
 module.exports = (function() {
   "use strict";

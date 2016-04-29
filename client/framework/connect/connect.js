@@ -6,17 +6,17 @@
 
 "use strict";
 
-const { Cu } = require("ff-devtools-lib/sham/chrome");
+const { Cu } = require("ff-devtools-libs/sham/chrome");
 
-const { XPCOMUtils } = require("ff-devtools-lib/sham/xpcomutils");
-const { Services } = require("ff-devtools-lib/sham/services");
-const { Task } = require("ff-devtools-lib/sham/task");
-const { gDevTools } = require("ff-devtools-lib/client/framework/gDevTools");
-var L10N = require("ff-devtools-lib/sham/l10n");
-var {TargetFactory} = require("ff-devtools-lib/client/framework/target");
-var {Toolbox} = require("ff-devtools-lib/client/framework/toolbox")
-var promise = require("ff-devtools-lib/sham/promise");
-var {DebuggerClient} = require("ff-devtools-lib/shared/client/main");
+const { XPCOMUtils } = require("ff-devtools-libs/sham/xpcomutils");
+const { Services } = require("ff-devtools-libs/sham/services");
+const { Task } = require("ff-devtools-libs/sham/task");
+const { gDevTools } = require("ff-devtools-libs/client/framework/gDevTools");
+var L10N = require("ff-devtools-libs/sham/l10n");
+var {TargetFactory} = require("ff-devtools-libs/client/framework/target");
+var {Toolbox} = require("ff-devtools-libs/client/framework/toolbox")
+var promise = require("ff-devtools-libs/sham/promise");
+var {DebuggerClient} = require("ff-devtools-libs/shared/client/main");
 
 var gClient;
 var gConnectionTimeout;

@@ -6,11 +6,11 @@
 
 "use strict";
 
-const {Cc, Ci, Cu} = require("ff-devtools-lib/sham/chrome");
-const DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
-const EventEmitter = require("ff-devtools-lib/shared/event-emitter");
-const promise = require("ff-devtools-lib/sham/promise");
-const {LongStringClient} = require("ff-devtools-lib/shared/client/main");
+const {Cc, Ci, Cu} = require("ff-devtools-libs/sham/chrome");
+const DevToolsUtils = require("ff-devtools-libs/shared/DevToolsUtils");
+const EventEmitter = require("ff-devtools-libs/shared/event-emitter");
+const promise = require("ff-devtools-libs/sham/promise");
+const {LongStringClient} = require("ff-devtools-libs/shared/client/main");
 
 /**
  * A WebConsoleClient is used as a front end for the WebConsoleActor that is

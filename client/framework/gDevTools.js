@@ -4,23 +4,23 @@
 
 "use strict";
 
-const { XPCOMUtils } = require("ff-devtools-lib/sham/xpcomutils");
-const { Services } = require("ff-devtools-lib/sham/services");
-const promise = require("ff-devtools-lib/sham/promise");
+const { XPCOMUtils } = require("ff-devtools-libs/sham/xpcomutils");
+const { Services } = require("ff-devtools-libs/sham/services");
+const promise = require("ff-devtools-libs/sham/promise");
 // Load target and toolbox lazily as they need gDevTools to be fully initialized
-const { TargetFactory } = require("ff-devtools-lib/client/framework/target");
-// const { Toolbox } = require("ff-devtools-lib/client/framework/toolbox");
+const { TargetFactory } = require("ff-devtools-libs/client/framework/target");
+// const { Toolbox } = require("ff-devtools-libs/client/framework/toolbox");
 
 //XPCOMUtils.defineLazyModuleGetter(this, "CustomizableUI",
 //                                  "resource:///modules/CustomizableUI.jsm");
-// const { DebuggerServer } = require("ff-devtools-lib/server/main");
-// const { DebuggerClient } = require("ff-devtools-lib/shared/client/main");
+// const { DebuggerServer } = require("ff-devtools-libs/server/main");
+// const { DebuggerClient } = require("ff-devtools-libs/shared/client/main");
 
 const {defaultTools: DefaultTools, defaultThemes: DefaultThemes} =
-require("ff-devtools-lib/client/definitions");
-const EventEmitter = require("ff-devtools-lib/shared/event-emitter");
-const Telemetry = require("ff-devtools-lib/client/shared/telemetry");
-// const {JsonView} = require("ff-devtools-lib/client/jsonview/main");
+require("ff-devtools-libs/client/definitions");
+const EventEmitter = require("ff-devtools-libs/shared/event-emitter");
+const Telemetry = require("ff-devtools-libs/client/shared/telemetry");
+// const {JsonView} = require("ff-devtools-libs/client/jsonview/main");
 
 const TABS_OPEN_PEAK_HISTOGRAM = "DEVTOOLS_TABS_OPEN_PEAK_LINEAR";
 const TABS_OPEN_AVG_HISTOGRAM = "DEVTOOLS_TABS_OPEN_AVERAGE_LINEAR";

@@ -7,7 +7,7 @@
 
 "use strict";
 
-const {Cc, Ci, Cu} = require("ff-devtools-lib/sham/chrome");
+const {Cc, Ci, Cu} = require("ff-devtools-libs/sham/chrome");
 
 /*loader.lazyGetter(this, "eventListenerService", () => {
   return Cc("@mozilla.org/eventlistenerservice;1")

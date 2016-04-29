@@ -28,9 +28,9 @@ Connecting a remote is as easy as (see below for aliasing `devtools`
 to `ff-devtools-libs`):
 
 ```js
-const { DebuggerClient } = require('ff-devtools-lib/shared/client/main');
-const { DebuggerTransport } = require('ff-devtools-lib/transport/transport');
-const { TargetFactory } = require("ff-devtools-lib/client/framework/target");
+const { DebuggerClient } = require('ff-devtools-libs/shared/client/main');
+const { DebuggerTransport } = require('ff-devtools-libs/transport/transport');
+const { TargetFactory } = require("ff-devtools-libs/client/framework/target");
 const socket = new WebSocket("ws://localhost:9000");
 const transport = new DebuggerTransport(socket);
 const client = new DebuggerClient(transport);

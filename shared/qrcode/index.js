@@ -4,8 +4,8 @@
 
 "use strict";
 
-const { Cu } = require("ff-devtools-lib/sham/chrome");
-const promise = require("ff-devtools-lib/sham/promise");
+const { Cu } = require("ff-devtools-libs/sham/chrome");
+const promise = require("ff-devtools-libs/sham/promise");
 
 // Lazily require encoder and decoder in case only one is needed
 Object.defineProperty(this, "Encoder", {

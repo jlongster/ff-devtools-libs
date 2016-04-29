@@ -6,18 +6,18 @@
 
 "use strict";
 
-const { Ci, Cu, components } = require("ff-devtools-lib/sham/chrome");
-const { Services } = require("ff-devtools-lib/sham/services");
-const DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
+const { Ci, Cu, components } = require("ff-devtools-libs/sham/chrome");
+const { Services } = require("ff-devtools-libs/sham/services");
+const DevToolsUtils = require("ff-devtools-libs/shared/DevToolsUtils");
 
 // WARNING I swapped the sync one for the async one here
 //const promise = require("resource://devtools/shared/deprecated-sync-thenables.js", {}).Promise;
-const promise = require("ff-devtools-lib/sham/promise");
+const promise = require("ff-devtools-libs/sham/promise");
 
-const events = require("ff-devtools-lib/sdk/event/core");
-const { WebConsoleClient } = require("ff-devtools-lib/shared/webconsole/client");
-/*const { DebuggerSocket } = require("ff-devtools-lib/shared/security/socket");*/
-/*const Authentication = require("ff-devtools-lib/shared/security/auth");*/
+const events = require("ff-devtools-libs/sdk/event/core");
+const { WebConsoleClient } = require("ff-devtools-libs/shared/webconsole/client");
+/*const { DebuggerSocket } = require("ff-devtools-libs/shared/security/socket");*/
+/*const Authentication = require("ff-devtools-libs/shared/security/auth");*/
 
 const noop = () => {};
 

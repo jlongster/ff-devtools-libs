@@ -3,14 +3,14 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-const { Cc, Ci, Cu } = require("ff-devtools-lib/sham/chrome");
-const { Task } = require("ff-devtools-lib/sham/task");
+const { Cc, Ci, Cu } = require("ff-devtools-libs/sham/chrome");
+const { Task } = require("ff-devtools-libs/sham/task");
 
-const { Services } = require("ff-devtools-lib/sham/services");
-const { promise } = require("ff-devtools-lib/sham/promise");
-const OS = require("ff-devtools-lib/sham/os.js");
-const { DebuggerServer } = require("ff-devtools-lib/server/main");
-const { AppConstants } = require("ff-devtools-lib/sham/appconstants");
+const { Services } = require("ff-devtools-libs/sham/services");
+const { promise } = require("ff-devtools-libs/sham/promise");
+const OS = require("ff-devtools-libs/sham/os.js");
+const { DebuggerServer } = require("ff-devtools-libs/server/main");
+const { AppConstants } = require("ff-devtools-libs/sham/appconstants");
 loader.lazyGetter(this, "screenManager", () => {
   return Cc("@mozilla.org/gfx/screenmanager;1").getService(Ci.nsIScreenManager);
 });

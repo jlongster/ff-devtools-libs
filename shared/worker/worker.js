@@ -3,8 +3,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-const { Cc, Ci, Cu, ChromeWorker } = require("ff-devtools-lib/sham/chrome");
-const { dumpn } = require("ff-devtools-lib/shared/DevToolsUtils");
+const { Cc, Ci, Cu, ChromeWorker } = require("ff-devtools-libs/sham/chrome");
+const { dumpn } = require("ff-devtools-libs/shared/DevToolsUtils");
 
 var MESSAGE_COUNTER = 0;
 
@@ -120,7 +120,7 @@ function workerify (fn) {
   This creates an object URL on the browser window, and should not be used in production.`)
   // Fetch via window/utils here as we don't want to include
   // this module normally.
-  let { getMostRecentBrowserWindow } = require("ff-devtools-lib/sdk/window/utils");
+  let { getMostRecentBrowserWindow } = require("ff-devtools-libs/sdk/window/utils");
   let { URL, Blob } = getMostRecentBrowserWindow();
   let stringifiedFn = createWorkerString(fn);
   let blob = new Blob([stringifiedFn]);

@@ -6,11 +6,11 @@
 
 /* General utilities used throughout devtools. */
 
-var { Ci, Cu, Cc, components } = require("ff-devtools-lib/sham/chrome");
-var Services = require("ff-devtools-lib/sham/services");
-var promise = require("ff-devtools-lib/sham/promise");
+var { Ci, Cu, Cc, components } = require("ff-devtools-libs/sham/chrome");
+var Services = require("ff-devtools-libs/sham/services");
+var promise = require("ff-devtools-libs/sham/promise");
 
-const { FileUtils } = require("ff-devtools-lib/sham/fileutils");
+const { FileUtils } = require("ff-devtools-libs/sham/fileutils");
 
 /**
  * Turn the error |aError| into a string, without fail.
@@ -455,7 +455,7 @@ exports.dbg_assert = function dbg_assert(cond, e) {
   }
 };
 
-const { AppConstants } = require("ff-devtools-lib/sham/appconstants");
+const { AppConstants } = require("ff-devtools-libs/sham/appconstants");
 
 /**
  * No operation. The empty function.
@@ -520,11 +520,11 @@ exports.defineLazyModuleGetter = function defineLazyModuleGetter(aObject, aName,
   });
 };
 
-const { NetUtil } = require("ff-devtools-lib/sham/netutil");
+const { NetUtil } = require("ff-devtools-libs/sham/netutil");
 
-const { TextDecoder, OS } = require("ff-devtools-lib/sham/osfile");
+const { TextDecoder, OS } = require("ff-devtools-libs/sham/osfile");
 
-const NetworkHelper = require("ff-devtools-lib/shared/webconsole/network-helper");
+const NetworkHelper = require("ff-devtools-libs/shared/webconsole/network-helper");
 
 /**
  * Performs a request to load the desired URL and returns a promise.

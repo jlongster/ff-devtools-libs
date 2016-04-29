@@ -4,8 +4,8 @@
 
 "use strict";
 
-const {Cc, Ci, Cu} = require("ff-devtools-lib/sham/chrome");
-const { Services } = require("ff-devtools-lib/sham/services");
+const {Cc, Ci, Cu} = require("ff-devtools-libs/sham/chrome");
+const { Services } = require("ff-devtools-libs/sham/services");
 
 const COLOR_UNIT_PREF = "devtools.defaultColorUnit";
 
@@ -24,7 +24,7 @@ const SPECIALVALUES = new Set([
  * This module is used to convert between various color types.
  *
  * Usage:
- *   let {colorUtils} = require("ff-devtools-lib/shared/css-color");
+ *   let {colorUtils} = require("ff-devtools-libs/shared/css-color");
  *   let color = new colorUtils.CssColor("red");
  *
  *   color.authored === "red"

@@ -6,17 +6,17 @@
 
 "use strict";
 
-const {Cc, Ci, Cu, components} = require("ff-devtools-lib/sham/chrome");
-const {isWindowIncluded} = require("ff-devtools-lib/shared/layout/utils");
+const {Cc, Ci, Cu, components} = require("ff-devtools-libs/sham/chrome");
+const {isWindowIncluded} = require("ff-devtools-libs/shared/layout/utils");
 
-const { XPCOMUtils } = require("ff-devtools-lib/sham/xpcomutils");
+const { XPCOMUtils } = require("ff-devtools-libs/sham/xpcomutils");
 
-const { Services } = require("ff-devtools-lib/sham/services");
+const { Services } = require("ff-devtools-libs/sham/services");
 
 // TODO: Bug 842672 - browser/ imports modules from toolkit/.
 // Note that these are only used in WebConsoleCommands, see $0 and pprint().
-const { VariablesView, escapeHTML } = require("ff-devtools-lib/client/shared/widgets/VariablesView");
-const DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
+const { VariablesView, escapeHTML } = require("ff-devtools-libs/client/shared/widgets/VariablesView");
+const DevToolsUtils = require("ff-devtools-libs/shared/DevToolsUtils");
 
 // Not sure this is a correct replacement for XPCOMUtils.defineLazyServiceGetter below
 const swm = Cc("@mozilla.org/serviceworkers/manager;1").getService(Ci.nsIServiceWorkerManager);

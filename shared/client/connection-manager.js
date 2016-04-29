@@ -6,14 +6,14 @@
 
 "use strict";
 
-const {Cc, Ci, Cu, Cr} = require("ff-devtools-lib/sham/chrome");
-const EventEmitter = require("ff-devtools-lib/shared/event-emitter");
-const DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
-const { DebuggerServer } = require("ff-devtools-lib/server/main");
-const { DebuggerClient } = require("ff-devtools-lib/shared/client/main");
+const {Cc, Ci, Cu, Cr} = require("ff-devtools-libs/sham/chrome");
+const EventEmitter = require("ff-devtools-libs/shared/event-emitter");
+const DevToolsUtils = require("ff-devtools-libs/shared/DevToolsUtils");
+const { DebuggerServer } = require("ff-devtools-libs/server/main");
+const { DebuggerClient } = require("ff-devtools-libs/shared/client/main");
 
-const { Services } = require("ff-devtools-lib/sham/services");
-const { Task } = require("ff-devtools-lib/sham/task");
+const { Services } = require("ff-devtools-libs/sham/services");
+const { Task } = require("ff-devtools-libs/sham/task");
 
 const REMOTE_TIMEOUT = "devtools.debugger.remote-timeout";
 
@@ -21,7 +21,7 @@ const REMOTE_TIMEOUT = "devtools.debugger.remote-timeout";
  * Connection Manager.
  *
  * To use this module:
- * const {ConnectionManager} = require("ff-devtools-lib/shared/client/connection-manager");
+ * const {ConnectionManager} = require("ff-devtools-libs/shared/client/connection-manager");
  *
  * # ConnectionManager
  *

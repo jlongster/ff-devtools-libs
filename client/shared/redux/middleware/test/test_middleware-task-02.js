@@ -7,8 +7,8 @@
  * additional sync and async actions.
  */
 
-const { createStore, applyMiddleware } = require("ff-devtools-lib/client/shared/vendor/redux");
-const { task } = require("ff-devtools-lib/client/shared/redux/middleware/task");
+const { createStore, applyMiddleware } = require("ff-devtools-libs/client/shared/vendor/redux");
+const { task } = require("ff-devtools-libs/client/shared/redux/middleware/task");
 
 function run_test() {
   run_next_test();

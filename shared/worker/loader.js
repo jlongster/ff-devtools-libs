@@ -417,7 +417,7 @@ var {
 
     let reportError = console.error.bind(console);
 
-    //const Timer = require("ff-devtools-lib/sham/timer");
+    //const Timer = require("ff-devtools-libs/sham/timer");
 
     let setImmediate = function (callback) {
       setTimeout(callback, 0);

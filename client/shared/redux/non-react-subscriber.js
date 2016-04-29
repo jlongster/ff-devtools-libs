@@ -41,7 +41,7 @@
  * store.on('add-breakpoint', breakpoint => { ... });
  */
 
-const { combineReducers } = require("ff-devtools-lib/client/shared/vendor/redux");
+const { combineReducers } = require("ff-devtools-libs/client/shared/vendor/redux");
 
 /**
  * Make an emitter that is meant to be used in redux reducers. This

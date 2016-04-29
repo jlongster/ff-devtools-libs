@@ -3,8 +3,8 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-const { Cc, Ci, Cu, Cr } = require("ff-devtools-lib/sham/chrome");
-const { extend } = require("ff-devtools-lib/sdk/util/object");
+const { Cc, Ci, Cu, Cr } = require("ff-devtools-libs/sham/chrome");
+const { extend } = require("ff-devtools-libs/sdk/util/object");
 
 /**
  * Utility functions for managing recording models and their internal data,

@@ -14,16 +14,16 @@ const OS_HISTOGRAM = "DEVTOOLS_OS_ENUMERATED_PER_USER";
 const OS_IS_64_BITS = "DEVTOOLS_OS_IS_64_BITS_PER_USER";
 const SCREENSIZE_HISTOGRAM = "DEVTOOLS_SCREEN_RESOLUTION_ENUMERATED_PER_USER";
 
-var {Cc, Ci, Cu} = require("ff-devtools-lib/sham/chrome");
-var promise = require("ff-devtools-lib/sham/promise");
-var EventEmitter = require("ff-devtools-lib/shared/event-emitter");
-var Telemetry = require("ff-devtools-lib/client/shared/telemetry");
-// var HUDService = require("ff-devtools-lib/client/webconsole/hudservice");
-// var sourceUtils = require("ff-devtools-lib/client/shared/source-utils");
+var {Cc, Ci, Cu} = require("ff-devtools-libs/sham/chrome");
+var promise = require("ff-devtools-libs/sham/promise");
+var EventEmitter = require("ff-devtools-libs/shared/event-emitter");
+var Telemetry = require("ff-devtools-libs/client/shared/telemetry");
+// var HUDService = require("ff-devtools-libs/client/webconsole/hudservice");
+// var sourceUtils = require("ff-devtools-libs/client/shared/source-utils");
 
-const { Services } = require("ff-devtools-lib/sham/services");
-const { gDevTools } = require("ff-devtools-lib/client/framework/gDevTools");
-const { Task } = require("ff-devtools-lib/sham/task");
+const { Services } = require("ff-devtools-libs/sham/services");
+const { gDevTools } = require("ff-devtools-libs/client/framework/gDevTools");
+const { Task } = require("ff-devtools-libs/sham/task");
 const bundle = Services.strings.createBundle(require("l10n/toolbox.properties"));
 
 var toolboxStrings = (name, ...args) => {
@@ -37,22 +37,22 @@ var toolboxStrings = (name, ...args) => {
     return null;
   }
 };
-let { DebuggerClient } = require("ff-devtools-lib/shared/client/main");
-let { DebuggerTransport } = require("ff-devtools-lib/shared/transport/transport");
-let { TargetFactory } = require("ff-devtools-lib/client/framework/target");
-const { getHighlighterUtils } = require("ff-devtools-lib/client/framework/toolbox-highlighter-utils");
-const { Hosts } = require("ff-devtools-lib/client/framework/toolbox-hosts");
-const { Selection } = require("ff-devtools-lib/client/framework/selection");
-const { InspectorFront } = require("ff-devtools-lib/server/actors/inspector");
-const DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
-// const { showDoorhanger } = require("ff-devtools-lib/client/shared/doorhanger");
-// const { createPerformanceFront } = require("ff-devtools-lib/server/actors/performance");
-// const system = require("ff-devtools-lib/shared/system");
+let { DebuggerClient } = require("ff-devtools-libs/shared/client/main");
+let { DebuggerTransport } = require("ff-devtools-libs/shared/transport/transport");
+let { TargetFactory } = require("ff-devtools-libs/client/framework/target");
+const { getHighlighterUtils } = require("ff-devtools-libs/client/framework/toolbox-highlighter-utils");
+const { Hosts } = require("ff-devtools-libs/client/framework/toolbox-hosts");
+const { Selection } = require("ff-devtools-libs/client/framework/selection");
+const { InspectorFront } = require("ff-devtools-libs/server/actors/inspector");
+const DevToolsUtils = require("ff-devtools-libs/shared/DevToolsUtils");
+// const { showDoorhanger } = require("ff-devtools-libs/client/shared/doorhanger");
+// const { createPerformanceFront } = require("ff-devtools-libs/server/actors/performance");
+// const system = require("ff-devtools-libs/shared/system");
 // loader.lazyGetter(this, "osString", () => {
 //   return Cc("@mozilla.org/xre/app-info;1").getService(Ci.nsIXULRuntime).OS;
 // });
 // loader.lazyGetter(this, "registerHarOverlay", () => {
-//   return require("ff-devtools-lib/client/netmonitor/har/toolbox-overlay").register;
+//   return require("ff-devtools-libs/client/netmonitor/har/toolbox-overlay").register;
 // });
 
 // White-list buttons that can be toggled to prevent adding prefs for
@@ -90,7 +90,7 @@ exports.getWSTarget = function() {
     // Connect to chromium.  Need to fetch the tab list since it's over
     // http and not same-origin, but will connect directly to the web
     // socket.
-    let Valence = require("ff-devtools-lib/valence/lib/chromium/server");
+    let Valence = require("ff-devtools-libs/valence/lib/chromium/server");
     transport = Valence.connect(`http://${window.location.hostname}:8081/chrome-tab-list`);
   } else {
     // Connect to firefox through the websocket proxy.

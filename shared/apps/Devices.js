@@ -4,7 +4,7 @@
 
 "use strict";
 
-const EventEmitter = require("ff-devtools-lib/shared/event-emitter");
+const EventEmitter = require("ff-devtools-libs/shared/event-emitter");
 
 var addonInstalled = false;
 

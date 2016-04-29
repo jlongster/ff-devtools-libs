@@ -38,10 +38,10 @@
  * @constructor
  */
 
-const { Cc, Ci, Cu } = require("ff-devtools-lib/sham/chrome");
-const { Services } = require("ff-devtools-lib/sham/services");
-const DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
-const { getRootBindingParent } = require("ff-devtools-lib/shared/layout/utils");
+const { Cc, Ci, Cu } = require("ff-devtools-libs/sham/chrome");
+const { Services } = require("ff-devtools-libs/sham/services");
+const DevToolsUtils = require("ff-devtools-libs/shared/DevToolsUtils");
+const { getRootBindingParent } = require("ff-devtools-libs/shared/layout/utils");
 const domUtils = Cc("@mozilla.org/inspector/dom-utils;1")
     .getService(Ci.inIDOMUtils);
 

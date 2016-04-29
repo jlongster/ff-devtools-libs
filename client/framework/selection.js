@@ -6,9 +6,9 @@
 
 "use strict";
 
-const { Cu, Ci } = require("ff-devtools-lib/sham/chrome");
-const { getRootBindingParent } = require("ff-devtools-lib/shared/layout/utils");
-var EventEmitter = require("ff-devtools-lib/shared/event-emitter");
+const { Cu, Ci } = require("ff-devtools-libs/sham/chrome");
+const { getRootBindingParent } = require("ff-devtools-libs/shared/layout/utils");
+var EventEmitter = require("ff-devtools-libs/shared/event-emitter");
 
 /**
  * API

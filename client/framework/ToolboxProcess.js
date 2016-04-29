@@ -5,18 +5,18 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-const { Cc, Ci, Cu, Cr } = require("ff-devtools-lib/sham/chrome");
+const { Cc, Ci, Cu, Cr } = require("ff-devtools-libs/sham/chrome");
 
 const DBG_XUL = "/devtools/client/framework/toolbox-process-window.xul";
 const CHROME_DEBUGGER_PROFILE_NAME = "chrome_debugger_profile";
 
-const { Services } = require("ff-devtools-lib/sham/services");
-const { XPCOMUtils } = require("ff-devtools-lib/sham/xpcomutils");
-const { DevToolsLoader } = require("ff-devtools-lib/shared/Loader");
+const { Services } = require("ff-devtools-libs/sham/services");
+const { XPCOMUtils } = require("ff-devtools-libs/sham/xpcomutils");
+const { DevToolsLoader } = require("ff-devtools-libs/shared/Loader");
 
-this.Telemetry = require("ff-devtools-lib/client/shared/telemetry");
-this.EventEmitter = require("ff-devtools-lib/shared/event-emitter");
-const promise = require("ff-devtools-lib/sham/promise");
+this.Telemetry = require("ff-devtools-libs/client/shared/telemetry");
+this.EventEmitter = require("ff-devtools-libs/shared/event-emitter");
+const promise = require("ff-devtools-libs/sham/promise");
 
 var processes = new Set();
 

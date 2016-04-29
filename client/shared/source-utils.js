@@ -4,10 +4,10 @@
 "use strict";
 
 // NOTE: we'll be falling back to the environments URL global
-// const { URL } = require("ff-devtools-lib/sdk/url");
+// const { URL } = require("ff-devtools-libs/sdk/url");
 
 // TODO: add support for l10n
-// const { LocalizationHelper } = require("ff-devtools-lib/client/shared/l10n");
+// const { LocalizationHelper } = require("ff-devtools-libs/client/shared/l10n");
 // const l10n = new LocalizationHelper("chrome://devtools/locale/components.properties");
 // const UNKNOWN_SOURCE_STRING = l10n.getStr("frame.unknownSource");
 const UNKNOWN_SOURCE_STRING = "unknown"

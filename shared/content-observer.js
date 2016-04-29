@@ -3,10 +3,10 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-const {Cc, Ci, Cu, Cr} = require("ff-devtools-lib/sham/chrome");
-const { Services } = require("ff-devtools-lib/sham/services");
+const {Cc, Ci, Cu, Cr} = require("ff-devtools-libs/sham/chrome");
+const { Services } = require("ff-devtools-libs/sham/services");
 
-const events = require("ff-devtools-lib/sdk/event/core");
+const events = require("ff-devtools-libs/sdk/event/core");
 
 /**
  * Handles adding an observer for the creation of content document globals,

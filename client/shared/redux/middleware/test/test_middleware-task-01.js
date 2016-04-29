@@ -2,8 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-const { createStore, applyMiddleware } = require("ff-devtools-lib/client/shared/vendor/redux");
-const { task } = require("ff-devtools-lib/client/shared/redux/middleware/task");
+const { createStore, applyMiddleware } = require("ff-devtools-libs/client/shared/vendor/redux");
+const { task } = require("ff-devtools-libs/client/shared/redux/middleware/task");
 
 /**
  * Tests that task middleware allows dispatching generators, promises and objects

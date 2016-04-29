@@ -1,5 +1,5 @@
 
-const Toolbox = require("ff-devtools-lib/client/framework/toolbox");
+const Toolbox = require("ff-devtools-libs/client/framework/toolbox");
 
 Toolbox.getWSTarget().then(target => {
   const toolbox = new Toolbox.Toolbox(target, "jsdebugger", "bottom");

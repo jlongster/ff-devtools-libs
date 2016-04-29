@@ -6,13 +6,13 @@
 
 "use strict";
 
-var { Ci } = require("ff-devtools-lib/sham/chrome");
-var Services = require("ff-devtools-lib/sham/services");
-var DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
-const { DebuggerSocket } = require("ff-devtools-lib/shared/security/socket");
-const { AuthenticationResult } = require("ff-devtools-lib/shared/security/auth");
+var { Ci } = require("ff-devtools-libs/sham/chrome");
+var Services = require("ff-devtools-libs/sham/services");
+var DevToolsUtils = require("ff-devtools-libs/shared/DevToolsUtils");
+const { DebuggerSocket } = require("ff-devtools-libs/shared/security/socket");
+const { AuthenticationResult } = require("ff-devtools-libs/shared/security/auth");
 
-const bundle = Services.strings.createBundle(require("ff-devtools-lib/shared/locales/en-US/debugger.properties"));
+const bundle = Services.strings.createBundle(require("ff-devtools-libs/shared/locales/en-US/debugger.properties"));
 
 var Client = exports.Client = {};
 var Server = exports.Server = {};
