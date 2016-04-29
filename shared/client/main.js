@@ -14,7 +14,7 @@ const DevToolsUtils = require("ff-devtools-lib/shared/DevToolsUtils");
 //const promise = require("resource://devtools/shared/deprecated-sync-thenables.js", {}).Promise;
 const promise = require("ff-devtools-lib/sham/promise");
 
-const events = require("sdk/event/core");
+const events = require("ff-devtools-lib/sdk/event/core");
 const { WebConsoleClient } = require("ff-devtools-lib/shared/webconsole/client");
 /*const { DebuggerSocket } = require("ff-devtools-lib/shared/security/socket");*/
 /*const Authentication = require("ff-devtools-lib/shared/security/auth");*/

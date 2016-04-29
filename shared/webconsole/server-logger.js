@@ -7,7 +7,7 @@
 "use strict";
 
 const {Cu, Ci} = require("ff-devtools-lib/sham/chrome");
-const {Class} = require("sdk/core/heritage");
+const {Class} = require("ff-devtools-lib/sdk/core/heritage");
 const Services = require("ff-devtools-lib/sham/services");
 
 const {DebuggerServer} = require("ff-devtools-lib/server/main");

@@ -6,7 +6,7 @@
 const {Cc, Ci, Cu, Cr} = require("ff-devtools-lib/sham/chrome");
 const { Services } = require("ff-devtools-lib/sham/services");
 
-const events = require("sdk/event/core");
+const events = require("ff-devtools-lib/sdk/event/core");
 
 /**
  * Handles adding an observer for the creation of content document globals,

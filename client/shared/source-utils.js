@@ -4,7 +4,7 @@
 "use strict";
 
 // NOTE: we'll be falling back to the environments URL global
-// const { URL } = require("sdk/url");
+// const { URL } = require("ff-devtools-lib/sdk/url");
 
 // TODO: add support for l10n
 // const { LocalizationHelper } = require("ff-devtools-lib/client/shared/l10n");

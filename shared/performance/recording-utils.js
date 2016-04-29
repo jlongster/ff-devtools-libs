@@ -4,7 +4,7 @@
 "use strict";
 
 const { Cc, Ci, Cu, Cr } = require("ff-devtools-lib/sham/chrome");
-const { extend } = require("sdk/util/object");
+const { extend } = require("ff-devtools-lib/sdk/util/object");
 
 /**
  * Utility functions for managing recording models and their internal data,

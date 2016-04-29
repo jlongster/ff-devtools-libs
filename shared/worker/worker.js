@@ -120,7 +120,7 @@ function workerify (fn) {
   This creates an object URL on the browser window, and should not be used in production.`)
   // Fetch via window/utils here as we don't want to include
   // this module normally.
-  let { getMostRecentBrowserWindow } = require("sdk/window/utils");
+  let { getMostRecentBrowserWindow } = require("ff-devtools-lib/sdk/window/utils");
   let { URL, Blob } = getMostRecentBrowserWindow();
   let stringifiedFn = createWorkerString(fn);
   let blob = new Blob([stringifiedFn]);

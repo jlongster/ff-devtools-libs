@@ -5,7 +5,7 @@
 "use strict";
 
 const { Ci } = require("ff-devtools-lib/sham/chrome");
-const { memoize } = require("sdk/lang/functional");
+const { memoize } = require("ff-devtools-lib/sdk/lang/functional");
 
 const { setIgnoreLayoutChanges } = require("ff-devtools-lib/server/actors/layout");
 exports.setIgnoreLayoutChanges = (...args) =>

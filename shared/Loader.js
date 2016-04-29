@@ -371,7 +371,7 @@ DevToolsLoader.prototype = {
     }
 
     if (this._provider) {
-      var events = this.require("sdk/system/events");
+      var events = this.require("ff-devtools-lib/sdk/system/events");
       events.emit("devtools-unloaded", {});
       delete this.require;
       this._provider.unload("newprovider");
@@ -418,7 +418,7 @@ DevToolsLoader.prototype = {
    * Reload the current provider.
    */
   reload: function(showToolbox) {
-    var events = this.require("sdk/system/events");
+    var events = this.require("ff-devtools-lib/sdk/system/events");
     events.emit("startupcache-invalidate", {});
     events.emit("devtools-unloaded", {});
 
